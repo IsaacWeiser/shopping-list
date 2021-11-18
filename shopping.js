@@ -34,3 +34,23 @@ const shoppingList = [
     for (const item of shoppingList) {
         console.log(item)
     }
+
+    //create a function that adds grocery items to the list takes an id as an argument and adds the date
+function addToList (idnum, nameOfProd, priceOf) {
+   const d= new Date()
+    shoppingList.push({
+        id: idnum,
+        name: nameOfProd,
+        price: priceOf,
+        date: d
+    })
+    for (const item of shoppingList)
+    {
+        if (idnum === item.id)
+        {
+            console.log(item)
+        }
+    }
+}
+
+addToList(8, 'Cheerios', 6)
